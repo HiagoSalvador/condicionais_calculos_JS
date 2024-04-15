@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2- Escreva um programa em JavaScript, que leia um número e informe se ele é divisível por 10, por 5 ou por 2 ou se não é divisível por nenhum deles.
+        function verificarDivisibilidade(numero) {
+    if (numero % 10 === 0) {
+        return `${numero} é divisível por 10.`;
+    } else if (numero % 5 === 0) {
+        return `${numero} é divisível por 5.`;
+    } else if (numero % 2 === 0) {
+        return `${numero} é divisível por 2.`;
+    } else {
+        return `${numero} não é divisível por 10, 5 ou 2.`;
+    }
+}
+
+const numero = parseInt(prompt("Insira um número inteiro:"));
+
+const resultado = verificarDivisibilidade(numero);
+document.write(resultado);
+    </script>
+</body>
+</html>

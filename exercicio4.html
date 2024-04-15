@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Dados três valores A, B e C, construa um programa em JavaScript, que imprima os valores de forma descendente (do maior para o menor).
+        const a = parseFloat(prompt("Insira o valor de A:"));
+        const b = parseFloat(prompt("Insira o valor de B:"));
+        const c = parseFloat(prompt("Insira o valor de C:"));
+    
+        const valoresDescendentes = [a, b, c].sort((x, y) => y - x);
+    
+        document.write("Valores em ordem descendente: ");
+        for (let i = 0; i < valoresDescendentes.length; i++) {
+            document.write(valoresDescendentes[i] + " ");
+        }
+    </script>
+</body>
+</html>

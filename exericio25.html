@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*  Escreva um algoritmo que leia uma sequência de números do usuário e realize e a soma desses números. Encerre a execução quando um número negativo for digitado */
+
+        let soma = 0;
+        let numero = 0;
+
+while (numero >= 0) {
+    numero = parseFloat(prompt("Digite um número (digite um número negativo para encerrar):"));
+    if (numero >= 0) {
+        soma += numero;
+    }
+}
+
+document.write("A soma dos números é: " + soma);
+
+    </script>
+</body>
+</html>

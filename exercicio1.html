@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Criar um programa em JavaScript, que informe a quantidade total de calorias de uma refeição a partir do usuário que deverá informar o prato, a sobremesa e a bebida (veja a tabela a seguir). 
+    
+          const pratosCalorias = [200, 350, 400, 500];
+          const sobremesasCalorias = [150, 100, 120, 250];
+           const bebidasCalorias = [20, 50, 60, 50];
+
+
+function selecionarOpcao(tituloMenu, opcoes) {
+  document.write(`\n${tituloMenu} "<br>`);
+  for (let i = 0; i < opcoes.length; i++) {
+    document.write(`${i + 1} - ${opcoes[i]} "<br>`);
+  }
+  let opcaoSelecionada = Number(prompt("Digite o número da sua opção: "));
+  while (opcaoSelecionada < 1 || opcaoSelecionada > opcoes.length) {
+    opcaoSelecionada = Number(prompt("Opção inválida. Digite novamente: "));
+  }
+  return opcaoSelecionada - 1;
+}
+
+
+function calcularCalorias() {
+  const pratoSelecionado = selecionarOpcao("Pratos", ["Vegetariano", "Peixe", "Frango", "Carne"]);
+  const sobremesaSelecionada = selecionarOpcao("Sobremesas", ["Abacaxi", "Sorvete diet", "Mouse diet", "Mouse chocolate"]);
+  const bebidaSelecionada = selecionarOpcao("Bebidas", ["Chá", "Suco de laranja", "Suco de melão", "Refrigerante diet"]);
+
+  const caloriasPrato = pratosCalorias[pratoSelecionado];
+  const caloriasSobremesa = sobremesasCalorias[sobremesaSelecionada];
+  const caloriasBebida = bebidasCalorias[bebidaSelecionada];
+
+  const totalCalorias = caloriasPrato + caloriasSobremesa + caloriasBebida;
+
+  document.write(`\nTotal de calorias da sua refeição: ${totalCalorias} "<br>`);
+}
+
+calcularCalorias();
+
+    </script>
+</body>
+</html>

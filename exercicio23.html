@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Faça um programa que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200.
+
+        let contador0a100 = 0;
+        let contador101a200 = 0;
+        let contadorMaior200 = 0;
+
+for (let i = 1; i <= 20; i++) {
+    const numero = parseFloat(prompt("Digite o número " + i + ":"));
+    if (numero >= 0 && numero <= 100) {
+        contador0a100++;
+    } else if (numero >= 101 && numero <= 200) {
+        contador101a200++;
+    } else if (numero > 200) {
+        contadorMaior200++;
+    }
+}
+
+document.write("Quantidade de números entre 0 e 100: " + contador0a100 + "<br>");
+document.write("Quantidade de números entre 101 e 200: " + contador101a200 + "<br>");
+document.write("Quantidade de números maiores do que 200: " + contadorMaior200);
+
+    </script>
+</body>
+</html>

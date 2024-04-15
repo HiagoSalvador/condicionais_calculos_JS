@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Fazer um programa que imprima a média aritmética dos números 8,9 e 7. A média dos números 4, 5 e 6. A soma das duas médias. A média das médias.
+
+        
+       const numeros1 = [8, 9, 7];
+       const numeros2 = [4, 5, 6];
+
+
+const media1 = calcularMedia(numeros1);
+const media2 = calcularMedia(numeros2);
+const somaMedias = media1 + media2;
+
+
+const mediaDasMedias = somaMedias / 2;
+
+document.write("Média dos números 8, 9 e 7: " + media1 + "<br>");
+document.write("Média dos números 4, 5 e 6: " + media2 + "<br>");
+document.write("Soma das duas médias: " + somaMedias + "<br>");
+document.write("Média das médias: " + mediaDasMedias + "<br>");
+
+
+function calcularMedia(numeros) {
+    let soma = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        soma += numeros[i];
+    }
+    return soma / numeros.length;
+}
+
+
+    </script>
+</body>
+</html>
